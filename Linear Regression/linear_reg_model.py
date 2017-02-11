@@ -1,10 +1,6 @@
 from numpy import *
 import matplotlib.pyplot as plt
-
-
-def mean_squared_error(actual, predicted):
-    return 0.5*((actual-predicted)**2)
-
+from metrics import mean_squared_error
 
 def calculate_tss(y, n):
     y_avg = 0
