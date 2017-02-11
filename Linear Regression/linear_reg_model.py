@@ -1,8 +1,22 @@
 from numpy import *
 import matplotlib.pyplot as plt
 
+
 def mean_squared_error(actual, predicted):
     return 0.5*((actual-predicted)**2)
+
+
+def calculate_tss(y, n):
+    y_avg = 0
+    y_tss = 0
+    for yi in y:
+        y_avg += yi
+    y_avg /= n
+
+    for yi in y:
+        y_tss += mean_squared_error(yi, y_avg)
+    print y_tss
+    return y_tss
 
 
 def compute_cost(x, y, theta1, theta2, n):
@@ -53,7 +67,7 @@ class LinearRegression:
         self.theta1 = theta1
         self.theta2 = theta2
 
-    def plot(self,time):
+    def plot(self, time):
         plt.ion()
 
         x = self.x
@@ -72,6 +86,30 @@ class LinearRegression:
         y = theta1 + theta2 * x
         print "The predicted value for x = {0} is y = {1}".format(x, y)
 
+    def score(self):
+        x = self.x
+        y = self.y
+        theta1 = self.theta1
+        theta2 = self.theta2
+        sse = compute_cost(x, y, theta1, theta2, 1)
+        print sse
+        tss = calculate_tss(y, self.length)
+        r_squared = 1 - (sse/tss)
+        print (" The R-squared error is {0}".format(r_squared))
+
+    def plot_residual(self):
+        x = self.x
+        y = self.y
+        theta1 = self.theta1
+        theta2 = self.theta2
+        y_pred = theta1 + theta2 * x
+        residual = y - y_pred
+        plt.ion()
+        plt.clf()
+        plt.pause(0.01)
+        plt.plot(x, zeros(97), '-+')
+        plt.scatter(x, residual)
+        plt.pause(5)
 
 def run():
 
@@ -82,8 +120,8 @@ def run():
     model.plot(0.001)
     model.train(theta1=0, theta2=0, iterations=10000, lr=0.0001)
     model.plot(4)
-    model.predict(0.5)
-
+    model.score()
+    model.plot_residual()
 
 
 if __name__ == '__main__':
