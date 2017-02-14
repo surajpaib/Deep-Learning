@@ -2,10 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1fa6eb8b-279f-4d1e-9de7-8c0af32782f0" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Sentiment Analysis/word2vec.ipynb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Sentiment Analysis/wordvectors.ipynb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Language Processing/bagofwords.ipynb" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Sentiment Analysis/word2vec.ipynb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Sentiment Analysis/wordvectors.ipynb" afterPath="" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -29,7 +28,7 @@
       <file leaf-file-name="sentiment_analysis.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Sentiment Analysis/sentiment_analysis.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="36">
+            <state relative-caret-position="72">
               <caret line="4" column="61" lean-forward="false" selection-start-line="4" selection-start-column="61" selection-end-line="4" selection-end-column="61" />
               <folding>
                 <element signature="e#0#61#0" expanded="true" />
@@ -38,11 +37,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="word2vec.ipynb" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Sentiment Analysis/word2vec.ipynb">
+      <file leaf-file-name="bagofwords.ipynb" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Language Processing/bagofwords.ipynb">
           <provider selected="true" editor-type-id="ipnb-editor">
             <state>
-              <selected id="0" />
+              <selected id="-1" />
             </state>
           </provider>
         </entry>
@@ -81,6 +80,7 @@
         <option value="$PROJECT_DIR$/Sentiment Analysis/sentiment_analysis.py" />
         <option value="$PROJECT_DIR$/Sentiment Analysis/wordvectors.ipynb" />
         <option value="$PROJECT_DIR$/Sentiment Analysis/word2vec.ipynb" />
+        <option value="$PROJECT_DIR$/Language Processing/bagofwords.ipynb" />
       </list>
     </option>
   </component>
@@ -161,6 +161,20 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="Linear Regression" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Deep Learning" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Deep Learning" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Language Processing" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -642,9 +656,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Sentiment Analysis/word2vec.ipynb">
+      <provider selected="true" editor-type-id="ipnb-editor">
+        <state>
+          <selected id="0" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Sentiment Analysis/sentiment_analysis.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="36">
+        <state relative-caret-position="72">
           <caret line="4" column="61" lean-forward="false" selection-start-line="4" selection-start-column="61" selection-end-line="4" selection-end-column="61" />
           <folding>
             <element signature="e#0#61#0" expanded="true" />
@@ -652,10 +673,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Sentiment Analysis/word2vec.ipynb">
+    <entry file="file://$PROJECT_DIR$/Language Processing/bagofwords.ipynb">
       <provider selected="true" editor-type-id="ipnb-editor">
         <state>
-          <selected id="0" />
+          <selected id="-1" />
         </state>
       </provider>
     </entry>
