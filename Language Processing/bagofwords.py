@@ -1,10 +1,10 @@
+from nltk.corpus import stopwords
+from sklearn.feature_extraction.text import CountVectorizer
+from sklearn.externals import joblib
+from sklearn.svm import SVC
 import pandas as pd
 from bs4 import BeautifulSoup
 import re
-from nltk.corpus import stopwords
-from sklearn.feature_extraction.text import CountVectorizer
-from numpy import array
-from sklearn.svm import SVC
 
 
 class AnalyzeReview(object):
@@ -64,6 +64,7 @@ class AnalyzeReview(object):
                                      max_features=5000)
         self.train_x = vectorizer.fit_transform(self.train_x).toarray()
         self.vectorizer = vectorizer
+        joblib.dump(vectorizer, 'vectorizer.pkl')
         print self.train_x, self.train_y
 
     def train_svm(self):
@@ -74,6 +75,7 @@ class AnalyzeReview(object):
         model = SVC()
         model.fit(self.train_x, self.train_y)
         self.model = model
+        joblib.dump(model, 'model.pkl')
 
     def predict(self, reviews):
         """
@@ -82,9 +84,11 @@ class AnalyzeReview(object):
         :return: Predicts sentiment
         """
         reviews = self.get_cleaned_review(reviews)
-        vectorizer = self.vectorizer
+        reviews = [reviews]
+        print reviews
+        vectorizer = joblib.load('vectorizer.pkl')
         vector = vectorizer.transform(reviews).toarray()
-        model = self.model
+        model = joblib.load('model.pkl')
         sentiment = model.predict(vector)
         return sentiment
 
