@@ -4,5 +4,5 @@
     <option name="workingDirectory" value="$PROJECT_DIR$" />
     <option name="URL" value="http://127.0.0.1:12000" />
   </component>
-  <component name="ProjectRootManager" version="2" project-jdk-name="Python 2.7.12 (/usr/bin/python2.7)" project-jdk-type="Python SDK" />
+  <component name="ProjectRootManager" version="2" project-jdk-name="Python 2.7.12+ (/usr/bin/python2.7)" project-jdk-type="Python SDK" />
 </project>
